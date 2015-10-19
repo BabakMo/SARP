@@ -34,7 +34,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 
 /**
- * Created by arjun on 3/3/15.
+ * Created by BabakMo on 3/3/15.
  *
  * Scans the given directory to invoke BluetoothService for each file in directory. BluetoothService
  * then uploads each file at a time.
