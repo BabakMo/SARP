@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" tools:context=".HomeScreen"
+    android:id="@+id/watch_view_stub"
+    tools:deviceIds="wear_square">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="-107"
+        android:id="@+id/RSSI"
+        android:layout_gravity="center_horizontal"
+        android:textSize="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="RSSI_STDEV"
+        android:id="@+id/RSSI_STDEV"
+        android:layout_below="@+id/RSSI"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="RSSI_AVG"
+        android:id="@+id/RSSI_AVG"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/RSSI"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="LAT_AVG"
+        android:id="@+id/LAT_AVG"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/RSSI_AVG"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/LAT_STDEV" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="LAT_STDEV"
+        android:id="@+id/LAT_STDEV"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/RSSI_AVG"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"></LinearLayout>
+
+    <EditText
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/field"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical" tools:context=".HomeScreen"
+    android:id="@+id/watch_view_stub"
+    tools:deviceIds="wear_square">
+
+    <RadioGroup android:id="@+id/radioGROUP" xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/radio_standing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/one"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="26dp" />
+        <RadioButton android:id="@+id/radio_sitting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/two"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="26dp" />
+        <RadioButton android:id="@+id/radio_laying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/three"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="26dp"
+            android:checked="false" />
+        <RadioButton android:id="@+id/radio_walking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/four"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="26dp"
+            android:checked="false" />
+        <RadioButton android:id="@+id/radio_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Strip Test"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="26dp" />
+        <RadioButton android:id="@+id/radio_lazy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/five"
+            android:onClick="onRadioButtonClicked"
+            android:textSize="26dp" />
+    </RadioGroup>
+</LinearLayout>

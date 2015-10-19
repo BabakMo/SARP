@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Gimbal</string>
+    <style name="AppTheme" parent="android:Theme.Material">
+        <!-- theme customizations -->
+        <!-- Main theme colors -->
+        <!--   your app branding color for the app bar -->
+
+    </style>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="one">Standing</string>
+    <string name="two">Sitting</string>
+    <string name="three">Laying Down</string>
+    <string name="four">Walking</string>
+    <string name="five">None</string>
+</resources>

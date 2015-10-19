@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="whi.ucla.erlab.gimbal" >
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault"
+        android:name="Gimbal">
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ScreenReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.SCREEN_ON"/>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="whi.ucla.erlab.gimbal.BeaconScan" android:enabled="true">
+            <intent-filter>
+                <action android:name="whi.ucla.erlab.gimbal.BeaconScan"/>
+            </intent-filter>
+        </service>
+        <service android:name="whi.ucla.erlab.gimbal.GyroScan" android:enabled="true">
+            <intent-filter>
+                <action android:name="whi.ucla.erlab.gimbal.GyroScan"/>
+            </intent-filter>
+        </service>
+        <service android:name="whi.ucla.erlab.gimbal.UploadService" android:enabled="true">
+            <intent-filter>
+                <action android:name="whi.ucla.erlab.gimbal.UploadService"/>
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/app_name"
+            android:showOnLockScreen="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
