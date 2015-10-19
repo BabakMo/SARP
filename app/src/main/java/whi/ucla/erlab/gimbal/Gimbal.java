@@ -19,7 +19,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by Arjun on 4/7/2015. This is the base class for this entire App. Maintains the app state
+ * Created by Babak on 4/7/2015. This is the base class for this entire App. Maintains the app state
  * during the lifecycle of the application. All BroadcastReceivers call functions from this class.
  *
  * BroadcastReceivers form the inputs for this app. They have been summarized below ::
