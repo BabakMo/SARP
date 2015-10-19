@@ -1,7 +1,7 @@
 package whi.ucla.erlab.gimbal;
 
 /**
- * Created by arjun on 3/3/15.
+ * Created by BabakMo on 3/3/15.
  */
 import java.io.BufferedWriter;
 import java.io.File;
