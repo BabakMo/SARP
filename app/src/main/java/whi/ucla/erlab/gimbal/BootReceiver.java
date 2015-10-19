@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 
 /**
- * Created by Babak on 3/2/15.
+ * Created by BabakMo on 3/2/15.
 
 Simple state machine to handle events based on power state. Manages all services including
 BeaconScan, GyroScan, UploadService, Logger, and UI behaviour.
